@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: elhardoum/dotnet-cd-demo:latest
+    image: ithinkatest/dotnet-cd-demo:latest
     restart: always
     build:
       context: .
@@ -13,7 +13,7 @@ services:
     env_file: .env
   
   mssql:
-    image: elhardoum/dotnet-cd-demo-db:latest
+    image: ithinkatest/dotnet-cd-demo-db:latest
     volumes:
       - ./db:/usr/src/app
       - ./mssql:/var/opt/mssql/data
