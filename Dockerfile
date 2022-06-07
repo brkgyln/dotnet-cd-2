@@ -6,4 +6,5 @@ WORKDIR /usr/src/app
 RUN dotnet restore
 RUN dotnet build
 
+
 ENTRYPOINT sh /usr/src/app/entrypoint.sh
