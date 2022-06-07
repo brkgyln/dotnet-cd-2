@@ -1,7 +1,7 @@
 use master;
 go
 
--- create db if not exists
+-- create db if not exists 
 if db_id('dotnetcd') is null
   create database dotnetcd;
 go
