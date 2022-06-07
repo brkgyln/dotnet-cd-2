@@ -1,4 +1,4 @@
-name: docker cd
+name: testWorkflow
 on:
   push:
     branches:
