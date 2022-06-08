@@ -32,6 +32,7 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         password: ${{ secrets.SSH_PASSWORD }}
+        privateKey: ${{ secrets.SSH_KEY}}
         script: |
           cd ~/dotnet-cd-2
           # pull git updates
