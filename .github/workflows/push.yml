@@ -27,13 +27,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: appleboy/ssh-action@master
+      uses: Creepios/sftp-action@v1.0.3
       with:
         host: ${{ secrets.SSH_HOST }}
+        port: 22
         username: ${{ secrets.SSH_USER }}
         password: ${{ secrets.SSH_PASSWORD }}
-        key: ${{ secrets.SSH_KEY}}
-        port: ${{ secrets.SSH_PORT }}
+        remotePath: './'        
         script: |
           cd ~/dotnet-cd-2
           # pull git updates
