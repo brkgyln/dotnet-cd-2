@@ -27,12 +27,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: appleboy/ssh-action@v0.1.4
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         password: ${{ secrets.SSH_PASSWORD }}
-        privateKey: ${{ secrets.SSH_KEY}}
+        key: ${{ secrets.SSH_KEY}}
+        port: ${{ secrets.SSH_PORT }}
         script: |
           cd ~/dotnet-cd-2
           # pull git updates
